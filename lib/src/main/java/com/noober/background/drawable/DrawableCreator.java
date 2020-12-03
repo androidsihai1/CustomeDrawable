@@ -156,7 +156,10 @@ public class DrawableCreator {
             return this;
         }
 
-        public Builder setCornersRadius(float cornersBottomLeftRadius, float cornersBottomRightRadius, float cornersTopLeftRadius, float cornersTopRightRadius) {
+        public Builder setCornersRadius(float cornersBottomLeftRadius,
+                                        float cornersBottomRightRadius,
+                                        float cornersTopLeftRadius,
+                                        float cornersTopRightRadius) {
             this.cornersBottomLeftRadius = cornersBottomLeftRadius;
             this.cornersBottomRightRadius = cornersBottomRightRadius;
             this.cornersTopLeftRadius = cornersTopLeftRadius;
@@ -699,7 +702,8 @@ public class DrawableCreator {
             if (gradient == Gradient.Linear && gradientAngle != -1) {
                 gradientAngle %= 360;
                 if (gradientAngle % 45 == 0) {
-                    GradientDrawable.Orientation mOrientation = GradientDrawable.Orientation.LEFT_RIGHT;
+                    GradientDrawable.Orientation mOrientation =
+                            GradientDrawable.Orientation.LEFT_RIGHT;
                     switch (gradientAngle) {
                         case 0:
                             mOrientation = GradientDrawable.Orientation.LEFT_RIGHT;
@@ -724,6 +728,8 @@ public class DrawableCreator {
                             break;
                         case 315:
                             mOrientation = GradientDrawable.Orientation.TL_BR;
+                            break;
+                        default:
                             break;
                     }
                     if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
@@ -914,7 +920,7 @@ public class DrawableCreator {
     public static void setDrawable(Drawable drawable, View view, DrawablePosition drawablePosition) {
 
         if (view instanceof TextView) {
-            if(drawable != null){
+            if (drawable != null) {
                 if (drawablePosition == DrawablePosition.Left) {
                     drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
                     ((TextView) view).setCompoundDrawables(drawable, null, null, null);
@@ -934,7 +940,7 @@ public class DrawableCreator {
                         view.setBackgroundDrawable(drawable);
                     }
                 }
-            }else {
+            } else {
                 Drawable[] drawables = ((TextView) view).getCompoundDrawables();
                 if (drawablePosition == DrawablePosition.Left) {
                     drawables[0] = null;

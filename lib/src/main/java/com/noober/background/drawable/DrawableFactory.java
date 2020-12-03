@@ -16,17 +16,20 @@ public class DrawableFactory {
     }
 
     //获取selector属性的drawable
-    public static StateListDrawable getSelectorDrawable(TypedArray typedArray, TypedArray selectorTa) throws Exception {
+    public static StateListDrawable getSelectorDrawable(TypedArray typedArray,
+                                                        TypedArray selectorTa) throws Exception {
         return (StateListDrawable) new SelectorDrawableCreator(typedArray, selectorTa).create();
     }
 
     //针对sdk21以前获取selector属性的drawable
-    public static StateListDrawable getSelectorPre21Drawable(TypedArray typedArray) throws Exception {
+    public static StateListDrawable getSelectorPre21Drawable(TypedArray typedArray) throws
+            Exception {
         return new SelectorPre21DrawableCreator(typedArray).create();
     }
 
     //获取button 属性的drawable
-    public static StateListDrawable getButtonDrawable(TypedArray typedArray, TypedArray buttonTa) throws Exception {
+    public static StateListDrawable getButtonDrawable(TypedArray typedArray, TypedArray buttonTa)
+            throws Exception {
         return (StateListDrawable) new ButtonDrawableCreator(typedArray, buttonTa).create();
     }
 
@@ -36,16 +39,19 @@ public class DrawableFactory {
     }
 
     //适配早期版本的属性
-    public static StateListDrawable getPressDrawable(GradientDrawable drawable, TypedArray typedArray, TypedArray pressTa)
+    public static StateListDrawable getPressDrawable(GradientDrawable drawable,
+                                                     TypedArray typedArray, TypedArray pressTa)
             throws Exception {
         return (StateListDrawable) new PressDrawableCreator(drawable, typedArray, pressTa).create();
     }
 
-    public static StateListDrawable getMultiSelectorDrawable(Context context, TypedArray selectorTa, TypedArray typedArray) {
+    public static StateListDrawable getMultiSelectorDrawable(Context context, TypedArray selectorTa,
+                                                             TypedArray typedArray) {
         return (StateListDrawable) new MultiSelectorDrawableCreator(context, selectorTa, typedArray).create();
     }
 
-    public static ColorStateList getMultiTextColorSelectorColorCreator(Context context, TypedArray selectorTa) {
+    public static ColorStateList getMultiTextColorSelectorColorCreator(Context context,
+                                                                       TypedArray selectorTa) {
         return new MultiTextColorSelectorColorCreator(context, selectorTa).create();
     }
 

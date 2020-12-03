@@ -27,16 +27,19 @@ public class ButtonDrawableCreator implements ICreateDrawable {
             int attr = buttonTa.getIndex(i);
 
             if (attr == R.styleable.background_button_drawable_bl_checked_button_drawable) {
-                setSelectorDrawable(typedArray, buttonTa, stateListDrawable, attr, android.R.attr.state_checked);
+                setSelectorDrawable(typedArray, buttonTa, stateListDrawable, attr,
+                        android.R.attr.state_checked);
             } else if (attr == R.styleable.background_button_drawable_bl_unChecked_button_drawable) {
-                setSelectorDrawable(typedArray, buttonTa, stateListDrawable, attr, -android.R.attr.state_checked);
+                setSelectorDrawable(typedArray, buttonTa, stateListDrawable,
+                        attr, -android.R.attr.state_checked);
             }
         }
         return stateListDrawable;
     }
 
     private void setSelectorDrawable(TypedArray typedArray, TypedArray buttonTa,
-                                     StateListDrawable stateListDrawable, int attr, @AttrRes int functionId) throws Exception {
+                                     StateListDrawable stateListDrawable, int attr,
+                                     @AttrRes int functionId) throws Exception {
         int color = 0;
         Drawable resDrawable = null;
 

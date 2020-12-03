@@ -2,11 +2,12 @@ package com.noober.background.drawable;
 
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
+
 import androidx.annotation.AttrRes;
 
 import com.noober.background.R;
 
-public class ColorStateCreator implements ICreateColorState{
+public class ColorStateCreator implements ICreateColorState {
 
     private TypedArray textTa;
 

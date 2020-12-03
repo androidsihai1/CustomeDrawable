@@ -3,7 +3,6 @@ package com.noober.background.drawable;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
 
@@ -168,7 +167,7 @@ public class GradientDrawableCreator implements ICreateDrawable {
             if (stateList.size() > 0) {
                 int size = stateList.size();
                 if (typedArray.hasValue(R.styleable.background_bl_solid_color)) {
-                    size ++;
+                    size++;
                 }
                 int[][] state = new int[size][];
                 int[] color = new int[size];
@@ -318,6 +317,8 @@ public class GradientDrawableCreator implements ICreateDrawable {
                     break;
                 case 315:
                     mOrientation = GradientDrawable.Orientation.TL_BR;
+                    break;
+                default:
                     break;
             }
             drawable.setOrientation(mOrientation);

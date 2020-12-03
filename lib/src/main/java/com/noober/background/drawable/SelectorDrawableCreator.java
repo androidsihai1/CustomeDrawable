@@ -4,6 +4,7 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.StateListDrawable;
+
 import androidx.annotation.AttrRes;
 
 import com.noober.background.R;
@@ -63,7 +64,8 @@ public class SelectorDrawableCreator implements ICreateDrawable {
     }
 
     private void setSelectorDrawable(TypedArray typedArray, TypedArray selectorTa,
-                                     StateListDrawable stateListDrawable, int attr, @AttrRes int functionId) throws Exception {
+                                     StateListDrawable stateListDrawable, int attr,
+                                     @AttrRes int functionId) throws Exception {
         int color = 0;
         Drawable resDrawable = null;
 
