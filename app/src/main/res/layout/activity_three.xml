@@ -5,6 +5,7 @@
     android:id="@+id/top_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:ignore="MissingPrefix"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -40,7 +41,7 @@
             app:bl_corners_radius="20dp"
             app:bl_pressed_color="#7CCD7C"
             app:bl_shape="rectangle"
-            app:bl_unpressed_color="#7CFC00" />
+            app:bl_unpressed_color="#7CFC00"/>
 
     <com.noober.background.view.BLTextView
         android:id="@+id/bl_text_view"

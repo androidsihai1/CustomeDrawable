@@ -33,7 +33,6 @@ public class ThreeActivity extends BaseActivity {
                 "#ff0000"), Color.parseColor("#00ff00")).setSelectedTextColor(Color.parseColor("#8935ff")).build();
         btn1.setBackground(build);
 
-
         //方式2  注册factory2，xml直接使用自定义属性
 
 
