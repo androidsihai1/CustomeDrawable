@@ -1,0 +1,31 @@
+<resources>
+
+    <declare-styleable name="CustomeDrawable">
+        <attr name="corner_radius" format="dimension" />
+        <attr name="my_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="background_press">
+        <attr name="pressed_color" format="color"></attr>
+        <attr name="unpressed_color" format="color"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="background">
+        <attr name="shape" format="enum">
+            <enum name="rectange" value="0"></enum>
+            <enum name="oval" value="1"></enum>
+            <enum name="line" value="2"></enum>
+            <enum name="ring" value="3"></enum>
+        </attr>
+
+        <attr name="corner_topLeftRadius" format="dimension"></attr>
+        <attr name="corner_topRightRadius" format="dimension"></attr>
+        <attr name="corner_bottomLeftRadius" format="dimension"></attr>
+        <attr name="corner_bottomRightRadius" format="dimension"></attr>
+
+        <attr name="solid_color" format="color"></attr>
+
+    </declare-styleable>
+
+
+</resources>
